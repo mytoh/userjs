@@ -43,7 +43,18 @@ var cssJsonString = {
   },
   '.chui div': {
     'display': 'none'
-  }
+  },
+  ' .chui>ul' {
+    'padding-left': '30px'
+  },
+  'ul': {
+    'margin': '0px'
+  },
+  '.ftbl': {
+    'table-layout': 'fixed',
+    'width': '476px',
+    'margin': '0 auto'
+  },
 
 }
 
@@ -58,14 +69,11 @@ function addThreadId() {
 
   // reload page every 1 minute
   setTimeout("location.reload()", 60000);
-
 }
+
 var cssString = [
   /* small { font-size:10pt } */
   /* .chui {font-size:small;} */
-  ' .chui>ul {padding-left:30px;}',
-  ' ul {margin:0px;}',
-  ' .ftbl {table-layout:fixed;width:476px;margin:0 auto;}',
   ' .ftdc {background-color:#993;width:4.5em;white-space:nowrap;}',
   ' #ftxa {width:388px;height:130px;}',
   ' form { margin:0px; }',
