@@ -41,7 +41,7 @@ var cssJsonString = {
 
 
 function main() {
-  CssJson.addCssJsonStyle(cssJsonString);
+  addCssJsonStyle(cssJsonString);
 }
 
 main();

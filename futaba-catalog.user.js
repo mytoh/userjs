@@ -72,7 +72,7 @@ function addThreadId() {
 
 function main() {
   // addGlobalStyle(cssString);
-  CssJson.addCssJsonStyle(cssJsonString);
+  addCssJsonStyle(cssJsonString);
   addThreadId();
 }
 
