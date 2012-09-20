@@ -8,17 +8,17 @@
 
 
 var cssJsonString = {
-  'body':{
-    'background-color':'#121212'
+  'body': {
+    'background-color': '#121212'
   },
-  'body,tr,td,th':{
+  'body,tr,td,th': {
     'font-size': '10pt !important'
   },
-  ' a.del':{
-    'color':'#222222'
+  ' a.del': {
+    'color': '#222222'
   },
    'a:hover': {
-     'color':'#888888'
+     'color': '#888888'
    },
    '.delform': {
      'position': 'absolute',
@@ -62,13 +62,11 @@ function addThreadId() {
   var tds = document.getElementsByTagName('td');
   for (var i in tds) {
     var threadId = document.createElement('span');
-    threadId.setAttribute('class','threadid');
+    threadId.setAttribute('class', 'threadid');
     threadId.innerHTML = ':' + tds[i].childNodes[0].getAttribute('href').match(/\d+/);
     tds[i].appendChild(threadId);
   }
 
-  // reload page every 1 minute
-  setTimeout(location.reload(), 60000);
 }
 
 var cssString = [
@@ -84,7 +82,7 @@ var cssString = [
   /* "#contdisp{font-size:10pt;}", */
   ' #reszb{cursor:pointer;text-decoration:underline;}',
   ' blockquote{word-wrap:break-word;word-break:break-all;max-width:800px;}'
-      ].join("");
+      ].join('');
 
 
 function main() {
@@ -92,6 +90,8 @@ function main() {
   addCssJsonStyle(cssJsonString);
   addThreadId();
   console.log(styleStr);
+  // reload page every 1 minute
+  setTimeout(location.reload(), 60000);
 }
 
 main();
