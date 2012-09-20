@@ -62,9 +62,8 @@ function addThreadId() {
   var tds = document.getElementsByTagName('td');
   for (var i in tds) {
     var threadId = document.createElement('span');
-    var child = tds[i].childNodes[0];
     threadId.setAttribute('class', 'threadid');
-    threadId.innerHTML = ':' + child.getAttribute('href').match(/\d+/);
+    threadId.innerHTML = ':' + tds[i].childNodes[0].getAttribute('href').match(/\d+/);
     tds[i].appendChild(threadId);
   }
  console.log('threadId');
