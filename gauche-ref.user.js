@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           futaba-catalog
-// @include        http://www.callcc.net/gauche/refj/
-// @include        http://practical-scheme.net/gauche/man/
+// @include        http://www.callcc.net/gauche/refj/*
+// @include        http://practical-scheme.net/gauche/man/*
 // @require        lib/cssjson.js
 // ==/UserScript==
 
