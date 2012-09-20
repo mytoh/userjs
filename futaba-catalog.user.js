@@ -2,7 +2,7 @@
 // @name           futaba-catalog
 // @include        http://jun.2chan.net/b/*
 // @include        http://may.2chan.net/b/*
-// @require        usercssjson.js
+// @require        cssjson.js
 // ==/UserScript==
 
 
