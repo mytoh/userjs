@@ -60,8 +60,8 @@ var cssJsonString = {
 
 function addThreadId() {
   var tds = document.getElementsByTagName('td');
-  for (var i in tds) {
-    var threadId = document.createElement('span');
+  for (let i in tds) {
+    let threadId = document.createElement('span');
     threadId.setAttribute('class','threadid');
     threadId.innerHTML = ':' + tds[i].childNodes[0].getAttribute('href').match(/\d+/);
     tds[i].appendChild(threadId);
