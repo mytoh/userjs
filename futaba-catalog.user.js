@@ -90,8 +90,8 @@ function main() {
   addCssJsonStyle(cssJsonString);
   addThreadId();
   console.log(styleStr);
-  // reload page every 1 minute
-  setTimeout(location.reload(), 60000);
+  // // reload page every 1 minute
+  // setTimeout(location.reload(), 60000);
 }
 
 main();
