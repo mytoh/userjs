@@ -91,6 +91,7 @@ function main() {
   // addGlobalStyle(cssString);
   addCssJsonStyle(cssJsonString);
   addThreadId();
+  console.log(styleStr);
 }
 
 main();
