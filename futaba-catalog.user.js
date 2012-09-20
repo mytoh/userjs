@@ -67,32 +67,14 @@ function addThreadId() {
     threadId.innerHTML = ':' + child.getAttribute('href').match(/\d+/);
     tds[i].appendChild(threadId);
   }
-
+ console.log('threadId');
 }
-
-var cssString = [
-  /* small { font-size:10pt } */
-  /* .chui {font-size:small;} */
-  ' .ftdc {background-color:#993;width:4.5em;white-space:nowrap;}',
-  ' #ftxa {width:388px;height:130px;}',
-  ' form { margin:0px; }',
-  ' table.deleted{display:none;}',
-  /* "#ddel{font-size:8pt}" */
-  ' #ddbut{cursor:pointer;text-decoration:underline;}',
-  ' #contres{position:relative;left:1.5em;}',
-  /* "#contdisp{font-size:10pt;}", */
-  ' #reszb{cursor:pointer;text-decoration:underline;}',
-  ' blockquote{word-wrap:break-word;word-break:break-all;max-width:800px;}'
-      ].join('');
 
 
 function main() {
   // addGlobalStyle(cssString);
   addCssJsonStyle(cssJsonString);
   addThreadId();
-  console.log(styleStr);
-  // // reload page every 1 minute
-  // setTimeout(location.reload(), 60000);
 }
 
 main();
