@@ -44,7 +44,7 @@ var cssJsonString = {
   '.chui div': {
     'display': 'none'
   },
-  ' .chui>ul' {
+  ' .chui>ul': {
     'padding-left': '30px'
   },
   'ul': {
@@ -54,9 +54,9 @@ var cssJsonString = {
     'table-layout': 'fixed',
     'width': '476px',
     'margin': '0 auto'
-  },
+  }
 
-}
+};
 
 function addThreadId() {
   var tds = document.getElementsByTagName('td');
@@ -68,7 +68,7 @@ function addThreadId() {
   }
 
   // reload page every 1 minute
-  setTimeout("location.reload()", 60000);
+  setTimeout(location.reload(), 60000);
 }
 
 var cssString = [
@@ -78,12 +78,12 @@ var cssString = [
   ' #ftxa {width:388px;height:130px;}',
   ' form { margin:0px; }',
   ' table.deleted{display:none;}',
-  /* "#ddel{font-size:8pt}", */,
+  /* "#ddel{font-size:8pt}" */
   ' #ddbut{cursor:pointer;text-decoration:underline;}',
   ' #contres{position:relative;left:1.5em;}',
   /* "#contdisp{font-size:10pt;}", */
   ' #reszb{cursor:pointer;text-decoration:underline;}',
-  ' blockquote{word-wrap:break-word;word-break:break-all;max-width:800px;}',
+  ' blockquote{word-wrap:break-word;word-break:break-all;max-width:800px;}'
       ].join("");
 
 
