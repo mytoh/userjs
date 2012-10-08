@@ -23,11 +23,12 @@ var cssJsonString = {
 
   /* funcname */
   'dl dt b': {
-    'color': '#aaaafa !important'
+    'color': '#aa5a3a !important'
   },
 
   /* arg1 arg2 */
   'dl dt i': {
+    // 'color': '#555577 !important'
     'color': '#555577 !important'
   },
 
