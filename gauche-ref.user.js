@@ -4,7 +4,7 @@
 // @include        http://practical-scheme.net/gauche/man/*
 // ==/UserScript==
 
-require('lib/cssjson')
+require('lib/cssjson');
 
 var cssJsonString = {
   'body': {
