@@ -2,8 +2,9 @@
 // @name           gauche-ref
 // @include        http://www.callcc.net/gauche/refj/*
 // @include        http://practical-scheme.net/gauche/man/*
-// @require        lib/cssjson.js
 // ==/UserScript==
+
+require('lib/cssjson')
 
 var cssJsonString = {
   'body': {
