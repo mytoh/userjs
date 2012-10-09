@@ -12,7 +12,7 @@ var cssJsonString = {
   },
 
   'a': {
-    'color': '#684898 !important'
+    'color': '#384878 !important'
   },
 
   /*Function: funcname arg1 arg2 */
