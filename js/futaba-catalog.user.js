@@ -15,7 +15,7 @@ cssJsonString = {
   "body": {
     "background-color": "#121212"
   },
-  "bodytrtdth": {
+  "body,tr,td,th": {
     "font-size": "10pt !important"
   },
   "a.del": {
