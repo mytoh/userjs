@@ -50,12 +50,12 @@ cssJsonString =
 
 
 addThreadId = ->
-    tds = document.getElementsByTagName('td')
+    tds = document.getElementsByTagName "td"
     for i of tds
-        threadId = document.createElement 'span'
-        threadId.setAttribute 'class', 'threadid'
-        matches = tds[i].childNodes[0].getAttribute('href').match(/\d+/)
-        threadId.innerHTML = ':' + matches
+        threadId = document.createElement "span"
+        threadId.setAttribute "class", "threadid"
+        matches = tds[i].childNodes[0].getAttribute("href").match(/\d+/)
+        threadId.innerHTML = ":" + matches
         tds[i].appendChild threadId
         console.log threadId
 

@@ -66,13 +66,13 @@ cssJsonString = {
 
 addThreadId = function() {
   var i, matches, tds, threadId, _results;
-  tds = document.getElementsByTagName('td');
+  tds = document.getElementsByTagName("td");
   _results = [];
   for (i in tds) {
-    threadId = document.createElement('span');
-    threadId.setAttribute('class', 'threadid');
-    matches = tds[i].childNodes[0].getAttribute('href').match(/\d+/);
-    threadId.innerHTML = ':' + matches;
+    threadId = document.createElement("span");
+    threadId.setAttribute("class", "threadid");
+    matches = tds[i].childNodes[0].getAttribute("href").match(/\d+/);
+    threadId.innerHTML = ":" + matches;
     tds[i].appendChild(threadId);
     _results.push(console.log(threadId));
   }
