@@ -73,8 +73,8 @@ addThreadId = function() {
     threadId.setAttribute('class', 'threadid');
     matches = tds[i].childNodes[0].getAttribute('href').match(/\d+/);
     threadId.innerHTML = ':' + matches;
-    console.log('threadId');
-    _results.push(tds[i].appendChild(threadId));
+    tds[i].appendChild(threadId);
+    _results.push(console.log('threadId'));
   }
   return _results;
 };

@@ -56,8 +56,8 @@ addThreadId = () ->
         threadId.setAttribute('class', 'threadid')
         matches = tds[i].childNodes[0].getAttribute('href').match(/\d+/)
         threadId.innerHTML = ':' + matches
-        console.log('threadId')
         tds[i].appendChild(threadId)
+        console.log('threadId')
 
 
 main = () ->
