@@ -51,7 +51,6 @@ cssJsonString =
 
 addThreadId = ->
     tds = document.getElementsByTagName "td"
-
     for i of tds
         threadId = document.createElement "span"
         threadId.setAttribute "class", "threadid"
