@@ -74,7 +74,7 @@ addThreadId = function() {
     matches = tds[i].childNodes[0].getAttribute('href').match(/\d+/);
     threadId.innerHTML = ':' + matches;
     tds[i].appendChild(threadId);
-    _results.push(console.log('threadId'));
+    _results.push(console.log(threadId));
   }
   return _results;
 };
