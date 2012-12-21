@@ -1,11 +1,11 @@
 ###
-==UserScript==
-@name           futaba-catalog
-@include        http://jun.2chan.net/b/*
-@include        http://may.2chan.net/b/*
-@include        http://dec.2chan.net/b/*
-@require        lib/cssjson.js
-==/UserScript==
+// ==UserScript==
+// @name           futaba-catalog
+// @include        http://jun.2chan.net/b/*
+// @include        http://may.2chan.net/b/*
+// @include        http://dec.2chan.net/b/*
+// @require        lib/cssjson.js
+// ==/UserScript==
 ###
 
 
@@ -49,22 +49,22 @@ cssJsonString =
     "margin": "0 auto"
 
 
-addThreadId = () ->
+addThreadId = ->
     tds = document.getElementsByTagName('td')
     for i of tds
-        threadId = document.createElement('span')
-        threadId.setAttribute('class', 'threadid')
+        threadId = document.createElement 'span'
+        threadId.setAttribute 'class', 'threadid'
         matches = tds[i].childNodes[0].getAttribute('href').match(/\d+/)
         threadId.innerHTML = ':' + matches
-        tds[i].appendChild(threadId)
-        console.log('threadId')
+        tds[i].appendChild threadId
+        console.log 'threadId'
 
 
-main = () ->
+main = ->
   ###
   addGlobalStyle(cssString);
   ###
-  addCssJsonStyle(cssJsonString)
+  addCssJsonStyle cssJsonString
   addThreadId()
 
 main();
