@@ -4,11 +4,12 @@
 @name           futaba-catalog
 @include        http://jun.2chan.net/b/*
 @include        http://may.2chan.net/b/*
+@include        http://dec.2chan.net/b/*
 @require        lib/cssjson.js
 ==/UserScript==
 */
 
-var cssJsonString;
+var addThreadId, cssJsonString, main;
 
 cssJsonString = {
   "body": {
@@ -39,6 +40,10 @@ cssJsonString = {
   ".threadid": {
     " font-size": "7pt",
     " color": "#fb8def"
+    /*
+          remove ads
+    */
+
   },
   ".ama": {
     "display": "none"
@@ -59,11 +64,10 @@ cssJsonString = {
   }
 };
 
-addThreadId()(function() {
-  var i, matches, tds, threadId, _fn, _i, _len, _results;
+addThreadId = function() {
+  var i, matches, tds, threadId, _fn, _i, _len;
   tds = document.getElementsByTagName('td');
   _fn = function(i) {};
-  _results = [];
   for (_i = 0, _len = tds.length; _i < _len; _i++) {
     i = tds[_i];
     _fn(i);
@@ -72,17 +76,16 @@ addThreadId()(function() {
     matches = tds[i].childNodes[0].getAttribute('href').match(/\d+/);
     threadId.innerHTML = ':' + matches;
     tds[i].appendChild(threadId);
-    _results.push(console.log('threadId'));
   }
-  return _results;
-});
+  return console.log('threadId');
+};
 
-main()(function() {
+main = function() {
   /*
     addGlobalStyle(cssString);
   */
   addCssJsonStyle(cssJsonString);
   return addThreadId();
-});
+};
 
 main();
