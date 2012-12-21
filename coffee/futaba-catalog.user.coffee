@@ -3,6 +3,7 @@
 @name           futaba-catalog
 @include        http://jun.2chan.net/b/*
 @include        http://may.2chan.net/b/*
+@include        http://dec.2chan.net/b/*
 @require        lib/cssjson.js
 ==/UserScript==
 ###
@@ -31,7 +32,9 @@ cssJsonString =
     ".threadid":
       " font-size": "7pt"
       " color": "#fb8def"
-    # remove ads
+      ###
+      remove ads
+      ###
   ".ama":
     "display": "none"
   ".chui div":
@@ -46,7 +49,7 @@ cssJsonString =
     "margin": "0 auto"
 
 
-addThreadId() ->
+addThreadId = () ->
   tds = document.getElementsByTagName('td');
   for i in tds 
     do (i) ->
@@ -58,7 +61,7 @@ addThreadId() ->
   console.log('threadId');
 
 
-main() ->
+main = () ->
   ###
   addGlobalStyle(cssString);
   ###
