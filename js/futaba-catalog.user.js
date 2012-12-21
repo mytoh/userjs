@@ -65,20 +65,20 @@ cssJsonString = {
 };
 
 addThreadId = function() {
-  var i, matches, tds, threadId, _fn, _i, _len;
+  var i, matches, tds, threadId, _results;
   tds = document.getElementsByTagName('td');
-  _fn = function(i) {};
-  for (_i = 0, _len = tds.length; _i < _len; _i++) {
-    i = tds[_i];
-    _fn(i);
+  _results = [];
+  for (i in tds) {
     threadId = document.createElement('span');
     threadId.setAttribute('class', 'threadid');
     matches = tds[i].childNodes[0].getAttribute('href').match(/\d+/);
     threadId.innerHTML = ':' + matches;
-    tds[i].appendChild(threadId);
+    _results.push(tds[i].appendChild(threadId));
   }
-  return console.log('threadId');
+  return _results;
 };
+
+console.log('threadId');
 
 main = function() {
   /*
